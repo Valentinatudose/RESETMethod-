@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works | RESET Method™ | Valentina Tudose</title>
+    <meta name="description" content="Discover how the RESET Method™ rewires patterns at the subconscious and somatic levels for lasting transformation.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1E4976;
+            --primary-light: #2E6BA8;
+            --secondary: #C9A061;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a4a4a;
+            --text-light: #6b6b6b;
+            --bg-cream: #FAF8F5;
+            --bg-white: #ffffff;
+            --border-subtle: #e8e5e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: var(--bg-cream);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-subtle);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+        
+        .nav-links a {
+            color: var(--text-medium);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a.active {
+            color: var(--primary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            padding: 6rem 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+        
+        .narrow-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+        
+        /* Method Section */
+        .method-section {
+            padding: 8rem 0;
+            background: white;
+        }
+        
+        .section-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-medium);
+        }
+        
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin: 5rem 0;
+        }
+        
+        .method-card {
+            background: white;
+            padding: 3rem 2.5rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-subtle);
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .method-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+        
+        .method-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .method-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-color: var(--primary);
+        }
+        
+        .method-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .method-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .method-card p {
+            color: var(--text-medium);
+            line-height: 1.8;
+        }
+        
+        /* Steps Section */
+        .steps-section {
+            padding: 8rem 0;
+            background: var(--bg-cream);
+        }
+        
+        .steps-section h2 {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .steps-container {
+            max-width: 1000px;
+            margin: 4rem auto;
+        }
+        
+        .step {
+            background: white;
+            padding: 3.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+        
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(30, 73, 118, 0.3);
+        }
+        
+        .step h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.75rem;
+        }
+        
+        .step-subtitle {
+            font-size: 1.15rem;
+            color: var(--secondary);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        
+        .step p {
+            color: var(--text-medium);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        
+        .step-quote {
+            font-style: italic;
+            color: var(--text-light);
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-subtle);
+            margin-top: 2rem;
+            font-size: 1.05rem;
+        }
+        
+        /* Testimonials */
+        .testimonials-section {
+            padding: 8rem 0;
+            background: white;
+        }
+        
+        .testimonials-section h2 {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 5rem;
+            color: var(--primary);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .testimonial {
+            background: var(--bg-cream);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(30, 73, 118, 0.1);
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: var(--text-medium);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        /* TEDx Section */
+        .tedx-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            text-align: center;
+            padding: 8rem 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tedx-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .tedx-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .tedx-section h2 {
+            color: white;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            margin-bottom: 2rem;
+        }
+        
+        .tedx-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1.1rem 2.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.4s;
+            cursor: pointer;
+            border: none;
+            letter-spacing: 0.3px;
+        }
+        
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(201, 160, 97, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: #b08f4d;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(201, 160, 97, 0.4);
+        }
+        
+        .btn-white {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .btn-white:hover {
+            background: rgba(255,255,255,0.95);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,255,255,0.3);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.125rem;
+            color: var(--text-medium);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 3rem 0 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            text-align: center;
+        }
+        
+        .footer-content p {
+            margin: 0.5rem 0;
+        }
+        
+        /* Animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1rem 1.5rem;
+            }
+            
+            .hero {
+                padding: 4rem 1.5rem;
+            }
+            
+            .method-section,
+            .steps-section,
+            .testimonials-section,
+            .tedx-section {
+                padding: 5rem 0;
+            }
+            
+            .container,
+            .narrow-container {
+                padding: 0 1.5rem;
+            }
+            
+            .method-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .step {
+                padding: 2.5rem 2rem;
+            }
+            
+            .tedx-section {
+                padding: 5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">RESET Method™</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="how-it-works.html" class="active">How It Works</a>
+                <a href="start.html">Start Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>How RESET Rewires Your Patterns</h1>
+            <p>(Not Just 'Manages' Them—Actually Changes Them)</p>
+        </div>
+    </section>
+
+    <!-- Method Section -->
+    <section class="method-section">
+        <div class="container">
+            <div class="section-intro">
+                <p>The RESET Method™ doesn't work like traditional therapy or coaching. We don't spend years talking about the pattern. We don't rely on willpower or affirmations. We don't teach you to "cope better" with the same triggers.</p>
+                <p style="margin-top: 1.5rem;"><strong>Instead, we address the pattern at the level where it's actually stored: your subconscious mind and your body.</strong></p>
+            </div>
+            
+            <div class="method-grid">
+                <div class="method-card fade-in-up">
+                    <div class="method-icon">🧠</div>
+                    <h3>Clinical Hypnotherapy</h3>
+                    <p>To access and rewrite the subconscious blueprint where patterns are stored. We find the original moment the pattern was created and help your brain release it—like disconnecting an old wire.</p>
+                </div>
+                
+                <div class="method-card fade-in-up">
+                    <div class="method-icon">💫</div>
+                    <h3>Somatic Release</h3>
+                    <p>To discharge trapped emotions stored in your body's cells. Your body remembers what your mind has forgotten—and that muscle memory keeps the pattern alive. We complete what your nervous system started but couldn't finish.</p>
+                </div>
+                
+                <div class="method-card fade-in-up">
+                    <div class="method-icon">🎯</div>
+                    <h3>Advanced NLP Techniques</h3>
+                    <p>To install new empowering beliefs automatically—no endless affirmations required. Your brain learns new pathways the same way it learned the old ones: through direct experience, not positive thinking.</p>
+                </div>
+                
+                <div class="method-card fade-in-up">
+                    <div class="method-icon">🔮</div>
+                    <h3>Intuitive Tarot Guidance</h3>
+                    <p>To reveal blind spots and point you toward aligned action. Not fortune-telling—pattern recognition. The cards show you what your conscious mind is avoiding so you stop self-sabotaging.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="steps-section">
+        <div class="container">
+            <h2>Your Personalized Path: The 5-Step RESET</h2>
+            <p style="text-align: center; max-width: 700px; margin: 1rem auto 0; font-size: 1.125rem; color: var(--text-medium);">(Based on YOUR Assessment Results—Not Generic Steps)</p>
+            
+            <div class="steps-container">
+                <div class="step fade-in-up">
+                    <div class="step-number">1</div>
+                    <h3>RECOGNITION</h3>
+                    <p class="step-subtitle">Pattern Awareness</p>
+                    <p>You can't transform what you can't see. We use NLP elicitation, conversational hypnosis, and Tarot to uncover the invisible beliefs running your response to change—in relationships and in every other area of your life.</p>
+                    <p class="step-quote">"You can't change what you don't recognize."</p>
+                </div>
+                
+                <div class="step fade-in-up">
+                    <div class="step-number">2</div>
+                    <h3>ERASURE</h3>
+                    <p class="step-subtitle">Subconscious Rewiring</p>
+                    <p>We find the core emotional wound and the original moment when the pattern was created. Using hypnotherapy and NLP, we help your brain release it—like disconnecting a wire before it sparks. Most core wounds resolve in 3-6 sessions.</p>
+                    <p class="step-quote">"Until you make the unconscious conscious, it will direct your life and you will call it fate." – Carl Jung</p>
+                </div>
+                
+                <div class="step fade-in-up">
+                    <div class="step-number">3</div>
+                    <h3>SOMATIC RELEASE</h3>
+                    <p class="step-subtitle">Embodied Integration</p>
+                    <p>The body keeps the score—trauma lives in muscle tension, shallow breathing, chronic pain. We use somatic techniques to discharge stored activation so confidence, calm, and boundaries become FELT, not just thought.</p>
+                    <p class="step-quote">"The memory of trauma is encoded in the viscera, in heartbreak and gut-wrenching emotions, in autoimmune disorders and skeletal/muscular problems." – Bessel van der Kolk</p>
+                </div>
+                
+                <div class="step fade-in-up">
+                    <div class="step-number">4</div>
+                    <h3>EMPOWERMENT</h3>
+                    <p class="step-subtitle">Relational Mastery</p>
+                    <p>You gain the discernment, communication tools, and boundaries to attract and maintain healthy connections—romantic and otherwise. Not coping strategies—actual capacity. Your voice becomes clear, your needs become non-negotiable.</p>
+                    <p class="step-quote">"To heal is to touch with love that which we previously touched with fear." – Stephen Levine</p>
+                </div>
+                
+                <div class="step fade-in-up">
+                    <div class="step-number">5</div>
+                    <h3>TRANSFORMATION</h3>
+                    <p class="step-subtitle">Complete Integration</p>
+                    <p>Your personalized "Relational GPS"—daily practices that embody your new blueprint. Not willpower. Not discipline. Automatic alignment with who you're becoming. The new pattern becomes WHO YOU ARE.</p>
+                    <p class="step-quote">"Your task is not to seek for love but to find all the barriers within yourself that you have built against it." – Rumi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>What Our Clients Say About The RESET Method™</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial fade-in-up">
+                    <p class="testimonial-text">"The RESET Method™ has completely transformed my approach to relationships. I feel more confident and secure in my interactions, and I'm finally able to let go of past hurts."</p>
+                    <p class="testimonial-author">— Jessica L., Hong Kong</p>
+                </div>
+                
+                <div class="testimonial fade-in-up">
+                    <p class="testimonial-text">"Before meeting Valentina, I felt stuck in a cycle of self-doubt and fear, going in and out of toxic relationships. Now, I have the tools to build healthy, lasting connections and could not be more grateful."</p>
+                    <p class="testimonial-author">— Michel B., Paris, France</p>
+                </div>
+                
+                <div class="testimonial fade-in-up">
+                    <p class="testimonial-text">"Valentina's method helped me uncover deep-seated beliefs that were holding me back in love. I now feel more confident, liberated and ready to embrace love fully."</p>
+                    <p class="testimonial-author">— Sophia K., Toulouse, France</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEDx Section -->
+    <section class="tedx-section">
+        <div class="tedx-content">
+            <h2>Why I Know This Works</h2>
+            <p>I took my experience with heartbreak, healing, and transformation all the way to the TEDx stage—sharing how Embracing Unconditional Love changed my life and led me to develop RESET.</p>
+            <p>This method isn't theory—it's deeply lived and tested in real relationships.</p>
+            <a href="[TEDX_YOUTUBE_URL]" class="btn btn-white" target="_blank">Watch My TEDx Talk ▶</a>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Begin Your Transformation?</h2>
+            <p>Take the free assessment to discover your personalized RESET pathway.</p>
+            <a href="[YOUR_ASSESSMENT_URL]" class="btn btn-primary">Take the Free Assessment →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Valentina Tudose | RESET Method™</p>
+            <p>Structural Recalibration for Life Transitions</p>
+            <p style="margin-top: 1rem;">Paris | Hong Kong</p>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
